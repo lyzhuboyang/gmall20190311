@@ -1,0 +1,215 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (0xc06d007e), pid=21432, tid=0x0000000000004b2c
+#
+# JRE version:  (8.0_131-b11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.131-b11 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [KERNELBASE.dll+0x55299]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000288e000):  JavaThread "main" [_thread_in_native, id=19244, stack(0x0000000002890000,0x0000000002990000)]
+
+siginfo: ExceptionCode=0xc06d007e, ExceptionInformation=0x000000000298e790 
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000000, RCX=0x000000000100004e, RDX=0x000000000298df60
+RSP=0x000000000298e690, RBP=0x000000000298e7e8, RSI=0x0000000067c8d8dc, RDI=0x0000000000000000
+R8 =0x0064006e00690077, R9 =0x002e00730077006f, R10=0x0072006f00740073, R11=0x002e006500670061
+R12=0x0000000000000001, R13=0x0000000067c95780, R14=0x0000000067c95510, R15=0x0000000067c8d968
+RIP=0x00007ffcf08e5299, EFLAGS=0x0000000000000202
+
+Top of Stack: (sp=0x000000000298e690)
+0x000000000298e690:   0000000067c95510 0000000000000000
+0x000000000298e6a0:   0000000067c8d8dc 0000000000000000
+0x000000000298e6b0:   00000000c06d007e 0000000000000000
+0x000000000298e6c0:   00007ffcf08e5299 00007ffc00000001
+0x000000000298e6d0:   000000000298e790 0000000000000000
+0x000000000298e6e0:   0000000067c95510 0000000000000000
+0x000000000298e6f0:   0000000000000000 00007ffcf08bdcf0
+0x000000000298e700:   0000000000000000 0000000000000000
+0x000000000298e710:   0000000067c8d8dc 0000000000000000
+0x000000000298e720:   0000000000000000 0000000000000000
+0x000000000298e730:   0000000067c8cb80 00007ffcf090875f
+0x000000000298e740:   0000000000000000 00000000685a4e7e
+0x000000000298e750:   0000280bb0739000 0000000068575695
+0x000000000298e760:   0000000000000000 0000000067c88a17
+0x000000000298e770:   0000000000000000 0000000067c8d8dc
+0x000000000298e780:   0000000000000001 00000000685a38a8 
+
+Instructions: (pc=0x00007ffcf08e5299)
+0x00007ffcf08e5279:   8b d1 44 0f 47 c0 44 89 44 24 38 49 c1 e0 03 e8
+0x00007ffcf08e5289:   0a 42 03 00 48 8d 4c 24 20 48 ff 15 ef 5f 14 00
+0x00007ffcf08e5299:   0f 1f 44 00 00 48 8b 8c 24 c0 00 00 00 48 33 cc
+0x00007ffcf08e52a9:   e8 22 0e 03 00 48 81 c4 d8 00 00 00 c3 83 64 24 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000000000000000 is an unknown value
+RCX=0x000000000100004e is an unknown value
+RDX=0x000000000298df60 is pointing into the stack for thread: 0x000000000288e000
+RSP=0x000000000298e690 is pointing into the stack for thread: 0x000000000288e000
+RBP=0x000000000298e7e8 is pointing into the stack for thread: 0x000000000288e000
+RSI=0x0000000067c8d8dc is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0064006e00690077 is an unknown value
+R9 =0x002e00730077006f is an unknown value
+R10=0x0072006f00740073 is an unknown value
+R11=0x002e006500670061 is an unknown value
+R12=0x0000000000000001 is an unknown value
+R13=0x0000000067c95780 is an unknown value
+R14=0x0000000067c95510 is an unknown value
+R15=0x0000000067c8d968 is an unknown value
+
+
+Stack: [0x0000000002890000,0x0000000002990000],  sp=0x000000000298e690,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [KERNELBASE.dll+0x55299]
+C  [java.dll+0x18a17]
+C  [java.dll+0x18843]
+C  [java.dll+0xd256]
+C  [java.dll+0xd99c]
+C  [java.dll+0x66d8]
+C  0x0000000002aa7f74
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.System.initProperties(Ljava/util/Properties;)Ljava/util/Properties;+0
+j  java.lang.System.initializeSystemClass()V+13
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001ca16800 JavaThread "Finalizer" daemon [_thread_blocked, id=18620, stack(0x000000001fd10000,0x000000001fe10000)]
+  0x000000001ca11800 JavaThread "Reference Handler" daemon [_thread_blocked, id=15024, stack(0x000000001fc10000,0x000000001fd10000)]
+=>0x000000000288e000 JavaThread "main" [_thread_in_native, id=19244, stack(0x0000000002890000,0x0000000002990000)]
+
+Other Threads:
+  0x000000001e484000 VMThread [stack: 0x000000001fb10000,0x000000001fc10000] [id=17636]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 76288K, used 1310K [0x000000076b000000, 0x0000000770500000, 0x00000007c0000000)
+  eden space 65536K, 2% used [0x000000076b000000,0x000000076b147af0,0x000000076f000000)
+  from space 10752K, 0% used [0x000000076fa80000,0x000000076fa80000,0x0000000770500000)
+  to   space 10752K, 0% used [0x000000076f000000,0x000000076f000000,0x000000076fa80000)
+ ParOldGen       total 175104K, used 0K [0x00000006c1000000, 0x00000006cbb00000, 0x000000076b000000)
+  object space 175104K, 0% used [0x00000006c1000000,0x00000006c1000000,0x00000006cbb00000)
+ Metaspace       used 1103K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 116K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011e50000,0x0000000012650000] byte_map_base: 0x000000000e848000
+
+Marking Bits: (ParMarkBitMap*) 0x00000000684cc720
+ Begin Bits: [0x00000000138a0000, 0x0000000017860000)
+ End Bits:   [0x0000000017860000, 0x000000001b820000)
+
+Polling page: 0x00000000003d0000
+
+CodeCache: size=245760Kb used=405Kb max_used=405Kb free=245354Kb
+ bounds [0x0000000002a90000, 0x0000000002d00000, 0x0000000011a90000]
+ total_blobs=103 nmethods=0 adapters=77
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (2 events):
+Event: 1.197 Thread 0x000000000288e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076b007ca8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\
+Event: 1.197 Thread 0x000000000288e000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x000000076b007f90) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u131\8869\hotspot\src\share\vm\prims
+
+Events (10 events):
+Event: 1.198 loading class java/util/HashMap$Node done
+Event: 1.198 loading class sun/misc/VM
+Event: 1.198 loading class sun/misc/VM done
+Event: 1.199 loading class java/util/Hashtable$Entry
+Event: 1.199 loading class java/util/Hashtable$Entry done
+Event: 1.199 loading class java/lang/Math
+Event: 1.199 loading class java/lang/Math done
+Event: 1.200 loading class java/lang/ref/Finalizer$FinalizerThread
+Event: 1.200 loading class java/lang/ref/Finalizer$FinalizerThread done
+Event: 1.200 Thread 0x000000001ca16800 Thread added: 0x000000001ca16800
+
+
+Dynamic libraries:
+0x00007ff7b82c0000 - 0x00007ff7b82f7000 	E:\developer_tools\Java\jdk1.8.0_131\bin\java.exe
+0x00007ffcf3aa0000 - 0x00007ffcf3c8d000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffcf0cd0000 - 0x00007ffcf0d83000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffcf0890000 - 0x00007ffcf0b23000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffcf1790000 - 0x00007ffcf1833000 	C:\Windows\System32\ADVAPI32.DLL
+0x00007ffcf2d30000 - 0x00007ffcf2dce000 	C:\Windows\System32\msvcrt.dll
+0x00007ffcf0d90000 - 0x00007ffcf0e2e000 	C:\Windows\System32\sechost.dll
+0x00007ffcf15b0000 - 0x00007ffcf16d3000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffcf1410000 - 0x00007ffcf15a7000 	C:\Windows\System32\USER32.dll
+0x00007ffcefb70000 - 0x00007ffcefb90000 	C:\Windows\System32\win32u.dll
+0x00007ffcf3410000 - 0x00007ffcf3439000 	C:\Windows\System32\GDI32.dll
+0x00007ffcf0b30000 - 0x00007ffcf0cca000 	C:\Windows\System32\gdi32full.dll
+0x00007ffcefbf0000 - 0x00007ffcefc90000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffcf06c0000 - 0x00007ffcf07bc000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffce6150000 - 0x00007ffce63c9000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.107_none_05b63884071e656e\COMCTL32.dll
+0x00007ffcf10d0000 - 0x00007ffcf13fe000 	C:\Windows\System32\combase.dll
+0x00007ffcf07c0000 - 0x00007ffcf083e000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffcf16e0000 - 0x00007ffcf170e000 	C:\Windows\System32\IMM32.DLL
+0x0000000068550000 - 0x0000000068622000 	E:\developer_tools\Java\jdk1.8.0_131\jre\bin\msvcr100.dll
+0x0000000067cb0000 - 0x000000006854c000 	E:\developer_tools\Java\jdk1.8.0_131\jre\bin\server\jvm.dll
+0x00007ffcf37f0000 - 0x00007ffcf37f8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffce5010000 - 0x00007ffce5019000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffcf1060000 - 0x00007ffcf10cd000 	C:\Windows\System32\WS2_32.dll
+0x00007ffcedc90000 - 0x00007ffcedcb4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffceafe0000 - 0x00007ffceafea000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffcedb40000 - 0x00007ffcedb6d000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffcf0670000 - 0x00007ffcf06ba000 	C:\Windows\System32\cfgmgr32.dll
+0x0000000067ca0000 - 0x0000000067caf000 	E:\developer_tools\Java\jdk1.8.0_131\jre\bin\verify.dll
+0x0000000067c70000 - 0x0000000067c99000 	E:\developer_tools\Java\jdk1.8.0_131\jre\bin\java.dll
+0x0000000067c50000 - 0x0000000067c66000 	E:\developer_tools\Java\jdk1.8.0_131\jre\bin\zip.dll
+0x00007ffcd07b0000 - 0x00007ffcd099d000 	C:\Windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dmaven.multiModuleProjectDirectory=F:\IdeaProjects\gmall20190311\gmall-item-web -Dmaven.home=E:\developer_tools\IntelliJ IDEA 2020.1.3\plugins\maven\lib\maven3 -Dclassworlds.conf=E:\developer_tools\IntelliJ IDEA 2020.1.3\plugins\maven\lib\maven3\bin\m2.conf -Dmaven.ext.class.path=E:\developer_tools\IntelliJ IDEA 2020.1.3\plugins\maven\lib\maven-event-listener.jar -Dfile.encoding=UTF-8 
+java_command: org.codehaus.classworlds.Launcher -Didea.version=2020.2 -s E:\developer_tools\apache-maven\apache-maven-3.3.9\conf\settings.xml compile
+java_class_path (initial): E:\developer_tools\IntelliJ IDEA 2020.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;E:\developer_tools\IntelliJ IDEA 2020.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=E:\developer_tools\Java\jdk1.8.0_131
+PATH=E:\developer_tools\Java\jdk1.8.0_131\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\IDM Computer Solutions\UltraEdit;E:\developer_tools\apache-tomcat\apache-tomcat-8.5.24\bin;E:\developer_tools\apache-maven\apache-maven-3.3.9\bin;E:\developer_tools\MySQL\MySQLServer5.5\bin;E:\developer_tools\gradle\gradle-6.5.1\bin;E:\developer_tools\VisualSVNServer\\bin;E:\developer_tools\UltraEdit;E:\developer_tools\TortoiseGit\bin;C:\Program Files\nodejs\;E:\developer_tools\Git\bin;E:\developer_tools\Git\mingw64\libexec\git-core;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;E:\developer_tools\IntelliJ IDEA 2020.1.3\bin;;E:\developer_tools\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17763 (10.0.17763.1)
+
+CPU:total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 45 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 16708572k(4776440k free), swap 29816024k(104k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.131-b11) for windows-amd64 JRE (1.8.0_131-b11), built on Mar 15 2017 01:23:53 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Nov 02 11:36:54 2020
+elapsed time: 1 seconds (0d 0h 0m 1s)
+
